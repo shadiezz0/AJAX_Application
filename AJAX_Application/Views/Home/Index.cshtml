@@ -1,0 +1,23 @@
+﻿@model List<AJAX_Application.Models.Data.City>
+    <div class="container">
+        <table class="table table-hover table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">City Id</th>
+                    <th scope="col">City Name</th>
+                    <th scope="col">Country Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td># @item.Id</td>
+                        <td>@item.Name</td>
+                        <td>@item.Country.Name</td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
